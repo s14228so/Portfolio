@@ -28,7 +28,7 @@
       margin: 15px 20px;
     }
     nav{
-      background: #262626;
+      background: gray;
       height: 80px;
     }
     nav a{
@@ -38,6 +38,8 @@
 
     nav a:hover{
     opacity:1;
+    color:#000;
+    font-weight:bold;
     }
     .animsition-overlay-slide{
       background: #f18573;
@@ -49,13 +51,14 @@
 
 <div class="animsition-overlay" data-animasition-overlay="true">
   <nav>
-    <a href="./index.html" class="animsition-link">
+    <a href="./main.html" class="animsition-link">
       Works
     </a>
     <a href="./about.html" class="animsition-link">
       About
     </a>
   </nav>
+</div>
 
 
   <div class="banner-text">
@@ -68,33 +71,7 @@
 
     <script src="js/animsition.min.js">
     </script>
-    <script>
-    $(document).ready(function() {
-      $(".animsition-overlay").animsition({
-        inClass: 'overlay-slide-in-right',
-        outClass: 'overlay-slide-out-right',
-        inDuration: 1500,
-        outDuration: 800,
-        linkElement: '.animsition-link',
-        // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
-        loading: true,
-        loadingParentElement: 'body', //animsition wrapper element
-        loadingClass: 'animsition-loading',
-        loadingInner: '', // e.g '<img src="loading.svg" />'
-        timeout: false,
-        timeoutCountdown: 5000,
-        onLoadEvent: true,
-        browser: [ 'animation-duration', '-webkit-animation-duration'],
-        // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
-        // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
-        overlay : true,
-        overlayClass : 'animsition-overlay-slide',
-        overlayParentElement : 'body',
-        transition: function(url){ window.location.href = url; }
-      });
-    });
-    </script>
-
+    <script src="js/anim.js"></script>
 
   </body>
 </html>
