@@ -1,0 +1,231 @@
+html, body {
+     margin: 0;
+     padding: 0;
+     width: 100%;
+     height: 100%;
+}
+
+
+
+body{
+font-family: 'Architects Daughter', cursive;
+  cursor: crosshair;
+}
+
+
+.wrapper{
+  background:#f0faaf;
+  width: 100%;
+  height: 100vh;
+  z-index:2;
+  position:absolute;
+}
+
+.intro{
+  font-family: Poppins;
+  color: #323232;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -60%);
+  font-size: 100px;
+  font-weight: 300;
+
+}
+
+
+.myBtn{
+  cursor :crosshair;
+  letter-spacing: 5px;
+  height: 50px;
+  width: 200px;
+  padding: 16px 42px;
+  bakground: none;
+  border: 1px solid #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -0%);
+}
+.overlay{
+  z-index:1;
+  background: #a9c8d7;
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+}
+
+.works{
+  background:#b8ffe8;
+  height:100vh;
+  width:100%;
+  z-index:0;
+  position:absolute;
+}
+.work-list {
+  list-style: none;
+  display:flex;
+  flex-wrap: wrap;
+}
+
+nav{
+  width:100%;
+  height:80px;
+  background: gray;
+
+}
+nav li{
+    display:inline;
+    line-height: 80px;
+    margin-left: 30px;
+
+}
+
+nav li a{
+  text-decoration: none;
+  color:#fff;
+  font-weight: lighter;
+  font-size: 20px;
+  pointer-events: auto;
+}
+
+nav li a:hover {
+  color: #000;
+  font-weight: bold;
+}
+
+.heading{
+  font-size:35px;
+  padding-left:50px;
+  color:gray;
+}
+.animsition-overlay-slide{
+      background: tomato;
+    }
+
+.work-list  li a{
+  display:block;
+  width: 200px;
+  height: 200px;
+  background: #fff;
+  margin:50px;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity:0.6;
+  overflow:hidden;
+  box-shadow: 2px 2px 4px gray;
+}
+.work-list li a:hover{
+  opacity: 1;
+}
+.work-list li a:hover .overlay-text{
+  opacity:1;
+}
+
+.overlay-text{
+  background: rgba(0,0,0,0.6);
+  text-align:center;
+  padding-top:20%;
+  transiiton: all 0.6s ease 0s;
+  opacity:0;
+  width:100%;
+  height:100%;
+
+}
+
+.title{
+  color:orange;
+  font-size:20px;
+
+}
+
+.post{
+  color:limegreen;
+  font-size:10px;
+}
+
+#sidebar{
+  position: absolute;
+  width :300px;
+  height: 100%;
+  background: #000;
+  left: -300px;
+  transition: .4s;
+}
+
+#sidebar.active{
+  left: 0;
+}
+#sidebar ul li{
+  list-style: none;
+  color: #fff;
+  font-size: 20px;
+  padding: 20px 24px;
+}
+#sidebar .toggle-btn{
+  position: absolute;
+  top: 30px;
+  left: 330px;
+}
+
+.toggle-btn span{
+  width: 30px;
+  height: 4px;
+  background: #000;
+  display: block;
+  margin-top: 4px;
+}
+
+#ball {
+     width: 50px;
+     height: 50px;
+     background: none;
+     border: 1px solid grey;
+     border-radius: 50%;
+     position: absolute;
+     left: 50%;
+     top: 50%;
+     margin: -10px 0 0 -10px;
+     pointer-events: none;
+     z-index: 1000;
+}
+
+
+.work-list  li:nth-child(1) a {
+  background:url(canavas.png);
+  background-size:cover;
+  background-position: center;
+}
+
+.work-list  li:nth-child(2) a{
+  background:url(myslot.png);
+  background-size:cover;
+  background-position: center;
+}
+
+.work-list  li:nth-child(3) a{
+  background: url(intro.png);
+  background-size:cover;
+  background-position:center;
+}
+
+.work-list  li:nth-child(4) a{
+  background: url(soccer.png);
+  background-size:cover;
+  background-position:center;
+}
+.work-list  li:nth-child(5) a{
+  background: url(bg-trans.png);
+  background-size:cover;
+  background-position:center;
+}
+.work-list  li:nth-child(6) a{
+  background: url(float.png);
+  background-size:cover;
+  background-position:center;
+}
+.work-list  li:nth-child(7) a{
+  background: url(randombg.png);
+  background-size:cover;
+  background-position:center;
+}

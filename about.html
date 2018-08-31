@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="css/animsition.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter" rel="stylesheet">
+    <style>
+    *{
+      margin:0;
+      padding: 0;
+    }
+    body{
+    font-family: 'Architects Daughter', cursive;
+      cursor: crosshair;
+    }
+    .banner-text h2{
+      color: #fff;
+      text-transform: uppercase;
+      padding-top: 15%;
+      text-align: center;
+      font-size: 35px;
+    }
+    .animsition-link{
+      color:#fff;
+      text-decoration: none;
+      font-size:20px;
+      margin: 15px 20px;
+    }
+    nav{
+      background: #262626;
+      height: 80px;
+    }
+    nav a{
+      line-height: 80px;
+      opacity:0.7;
+    }
+
+    nav a:hover{
+    opacity:1;
+    }
+    .animsition-overlay-slide{
+      background: #f18573;
+    }
+    </style>
+      <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+  </head>
+  <body style="background: #54a491;">
+
+<div class="animsition-overlay" data-animasition-overlay="true">
+  <nav>
+    <a href="./index.html" class="animsition-link">
+      Works
+    </a>
+    <a href="./about.html" class="animsition-link">
+      About
+    </a>
+  </nav>
+
+
+  <div class="banner-text">
+    <h2>I am About Page</h2>
+  </div>
+
+</div>
+
+
+
+    <script src="js/animsition.min.js">
+    </script>
+    <script>
+    $(document).ready(function() {
+      $(".animsition-overlay").animsition({
+        inClass: 'overlay-slide-in-right',
+        outClass: 'overlay-slide-out-right',
+        inDuration: 1500,
+        outDuration: 800,
+        linkElement: '.animsition-link',
+        // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+        loading: true,
+        loadingParentElement: 'body', //animsition wrapper element
+        loadingClass: 'animsition-loading',
+        loadingInner: '', // e.g '<img src="loading.svg" />'
+        timeout: false,
+        timeoutCountdown: 5000,
+        onLoadEvent: true,
+        browser: [ 'animation-duration', '-webkit-animation-duration'],
+        // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+        // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+        overlay : true,
+        overlayClass : 'animsition-overlay-slide',
+        overlayParentElement : 'body',
+        transition: function(url){ window.location.href = url; }
+      });
+    });
+    </script>
+
+
+  </body>
+</html>
